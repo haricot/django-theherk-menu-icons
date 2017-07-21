@@ -24,6 +24,12 @@ class MenuIcon(PageExtension):
         blank=True,
         null=True
     )
+    menu_class_for_link_icon = models.CharField(
+        max_length=48,
+        verbose_name="Menu Class for Link Icon",
+        blank=True,
+        null=True
+    )
 
 extension_pool.register(MenuIcon)
 

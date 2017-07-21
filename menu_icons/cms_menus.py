@@ -17,6 +17,7 @@ class MenuIconsMod(Modifier):
                 node.menu_icon_image = page.menuicon.menu_icon_image
                 node.menu_icon_url = page.menuicon.menu_icon_url
                 node.menu_icon_font_awesome = page.menuicon.menu_icon_font_awesome
+                node.menu_class_for_link_icon = page.menuicon.menu_class_for_link_icon
             except:
                 pass
 
