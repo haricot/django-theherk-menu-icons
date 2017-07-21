@@ -5,10 +5,17 @@ TheHerk Menu Icons is a django CMS navigation modifier that allows attaching ico
 
 Due to a dramatic change in the process for modifying the page model in django CMS, TheHerk Menu Icons v1.3 was the last version that supported less than django CMS v3.
 
-Now support django CMS v3
+Version 2.0.0 support django CMS 3
 -------------------------
 
 TheHerk Menu Icons has been upgraded to support django CMS v3. Version 2.0.0 now supports adding via the cmstoolbar on the frontend. This has been tested using Python 3.4.0.
+
+Version 2.0.1 support django CMS >= 3.4.4
+-------------------------
+
++ Add field Menu Class for Link Icon
++ Add frontend editing Menu Icon
+
 
 Usage
 -----
@@ -22,7 +29,7 @@ Usage
 
 2. Run `python manage.py migrate menu_icons`.
 
-**note** - This assumes you are using `south`. If you aren't you can just use `syncdb`.
+**note** South was necessary for Django before 1.7  - This assumes you are using `south`. If you aren't you can just use `syncdb`.
 
 I have included the template that I use in the menus, so that you can see how it can be implemented.
 
