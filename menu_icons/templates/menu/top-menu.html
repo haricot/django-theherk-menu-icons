@@ -4,6 +4,9 @@
 <li class="divider"></li>
 <li class="{% if child.is_leaf_node %}{% else %}has-dropdown {% endif %}">
 {% if child.is_leaf_node %}<a href="{{ child.attr.redirect_url|default:child.get_absolute_url }}" class="{% if child.menu_class_for_link_icon %} {{ child.menu_class_for_link_icon }} {% endif %}">
+    {% if  request.current_page.id == child.id and request.current_page.menuicon %}
+    {% render_model_icon request.current_page.menuicon %}
+    {% endif %}
     {% if child.menu_icon_image %}<img src="{{ MEDIA_URL }}{{ child.menu_icon_image }}">
     {% elif child.menu_icon_url %}<img src="{{ child.menu_icon_url }}">
     {% elif child.menu_icon_font_awesome %}<i class="fa margin-right fa-fw {{ child.menu_icon_font_awesome }}"></i>
@@ -13,6 +16,9 @@
 {{ child.get_menu_title }}</a>
 {% else %}
 <a href="#" class="{% if child.menu_class_for_link_icon %} {{ child.menu_class_for_link_icon }} {% endif %}">
+    {% if  request.current_page.id == child.id and request.current_page.menuicon %}
+    {% render_model_icon request.current_page.menuicon %}
+    {% endif %}
     {% if child.menu_icon_image %}<img src="{{ MEDIA_URL }}{{ child.menu_icon_image }}">
     {% elif child.menu_icon_url %}<img src="{{ child.menu_icon_url }}">
     {% elif child.menu_icon_font_awesome %}<i class="fa margin-right fa-fw {{ child.menu_icon_font_awesome }}"></i>
